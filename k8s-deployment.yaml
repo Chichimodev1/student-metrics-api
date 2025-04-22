@@ -12,13 +12,12 @@ spec:
       labels:
         app: student-metrics-api
     spec:
-  containers:
-    - name: student-metrics-api
-      image: student-metrics-api
-      imagePullPolicy: Never
-      ports:
-        - containerPort: 8000
-
+      containers:
+        - name: student-metrics-api
+          image: student-metrics-api
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8000
 
 ---
 apiVersion: v1
@@ -34,4 +33,3 @@ spec:
       port: 8000
       targetPort: 8000
       nodePort: 30080
-
